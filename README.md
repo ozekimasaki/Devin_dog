@@ -1,6 +1,6 @@
 # Devin_dog
 
-かわいい犬のSVGアセットです。
+かわいい犬のSVGアセットです。全身付きで、CSSアニメーション入り（しっぽを振る・瞬き・舌のパンティング・耳がピクッと動く・呼吸）。
 
 ![cute dog](dog.svg)
 
@@ -9,7 +9,8 @@
 HTMLにそのまま埋め込めます:
 
 ```html
-<img src="dog.svg" alt="cute dog" width="120">
+<img src="dog.svg" alt="cute dog" width="160">
 ```
 
 または `<svg>` の中身をそのまま貼り付けてインラインSVGとしても使えます。
+アニメーションはSVG内部の `<style>` で定義されているため、`<img>` でも単体ファイルでも再生されます。

@@ -1,29 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
-  <!-- Floppy ears -->
-  <ellipse cx="48" cy="102" rx="24" ry="50" fill="#9C6B3C" transform="rotate(18 48 102)"/>
-  <ellipse cx="192" cy="102" rx="24" ry="50" fill="#9C6B3C" transform="rotate(-18 192 102)"/>
-  <!-- Head -->
-  <ellipse cx="120" cy="128" rx="82" ry="74" fill="#F7C58F"/>
-  <!-- Eye patch -->
-  <ellipse cx="158" cy="110" rx="28" ry="26" fill="#E3A061"/>
-  <!-- Eyes -->
-  <circle cx="88" cy="120" r="13" fill="#3A2E2E"/>
-  <circle cx="152" cy="120" r="13" fill="#3A2E2E"/>
-  <circle cx="92" cy="115" r="4.5" fill="#FFFFFF"/>
-  <circle cx="156" cy="115" r="4.5" fill="#FFFFFF"/>
-  <circle cx="85" cy="125" r="2" fill="#FFFFFF" opacity="0.7"/>
-  <circle cx="149" cy="125" r="2" fill="#FFFFFF" opacity="0.7"/>
-  <!-- Blush -->
-  <ellipse cx="64" cy="148" rx="11" ry="6" fill="#F49E7A" opacity="0.7"/>
-  <ellipse cx="176" cy="148" rx="11" ry="6" fill="#F49E7A" opacity="0.7"/>
-  <!-- Muzzle -->
-  <ellipse cx="120" cy="156" rx="32" ry="24" fill="#FDE7C9"/>
-  <!-- Tongue -->
-  <path d="M108 162 Q120 157 132 162 L129 190 Q120 199 111 190 Z" fill="#FF8FA3"/>
-  <path d="M120 168 L120 190" stroke="#E5697F" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Nose -->
-  <path d="M107 140 Q120 133 133 140 Q133 153 120 155 Q107 153 107 140 Z" fill="#4A3730"/>
-  <!-- Mouth -->
-  <path d="M118 155 Q113 167 102 164" stroke="#4A3730" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-  <path d="M122 155 Q127 167 138 164" stroke="#4A3730" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+  <title>Cute animated dog</title>
+  <style>
+    .tail {
+      transform-box: fill-box;
+      transform-origin: 12% 88%;
+      animation: wag 0.7s ease-in-out infinite alternate;
+    }
+    @keyframes wag {
+      from { transform: rotate(-14deg); }
+      to   { transform: rotate(18deg); }
+    }
+    .eyes {
+      transform-box: fill-box;
+      transform-origin: 50% 50%;
+      animation: blink 4.4s infinite;
+    }
+    @keyframes blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      93%           { transform: scaleY(0.08); }
+    }
+    .ear-left {
+      transform-box: fill-box;
+      transform-origin: 65% 15%;
+      animation: earTwitch 4.4s infinite;
+    }
+    @keyframes earTwitch {
+      0%, 84%, 100% { transform: rotate(0deg); }
+      87%           { transform: rotate(-9deg); }
+      91%           { transform: rotate(6deg); }
+      95%           { transform: rotate(-3deg); }
+    }
+    .tongue {
+      animation: pant 0.55s ease-in-out infinite alternate;
+    }
+    @keyframes pant {
+      from { transform: translateY(0); }
+      to   { transform: translateY(3px); }
+    }
+    .head {
+      transform-box: fill-box;
+      transform-origin: 50% 95%;
+      animation: headBob 4.4s ease-in-out infinite;
+    }
+    @keyframes headBob {
+      0%, 100% { transform: rotate(0deg); }
+      50%      { transform: rotate(2.5deg) translateY(1px); }
+    }
+    .body {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+      animation: breathe 3.2s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scaleY(1); }
+      50%      { transform: scaleY(1.025); }
+    }
+    .shadow {
+      transform-box: fill-box;
+      transform-origin: 50% 50%;
+      animation: shadowPulse 3.2s ease-in-out infinite;
+    }
+    @keyframes shadowPulse {
+      0%, 100% { transform: scaleX(1); opacity: 0.85; }
+      50%      { transform: scaleX(1.035); opacity: 1; }
+    }
+  </style>
+
+  <!-- Ground shadow -->
+  <ellipse class="shadow" cx="160" cy="292" rx="98" ry="14" fill="#3A2E2E" opacity="0.14"/>
+
+  <!-- Tail -->
+  <path class="tail" d="M228 240 C262 230 280 202 271 172 C268 160 254 161 255 172 C259 197 249 216 226 224 Z" fill="#9C6B3C"/>
+
+  <!-- Body group (breathing) -->
+  <g class="body">
+    <!-- Haunches -->
+    <ellipse cx="98" cy="248" rx="36" ry="32" fill="#F7C58F"/>
+    <ellipse cx="222" cy="248" rx="36" ry="32" fill="#F7C58F"/>
+    <!-- Torso -->
+    <ellipse cx="160" cy="218" rx="74" ry="62" fill="#F7C58F"/>
+    <!-- Belly -->
+    <ellipse cx="160" cy="240" rx="42" ry="34" fill="#FDE7C9"/>
+    <!-- Front legs -->
+    <rect x="124" y="238" width="26" height="46" rx="13" fill="#F7C58F"/>
+    <rect x="170" y="238" width="26" height="46" rx="13" fill="#F7C58F"/>
+    <!-- Front paws -->
+    <ellipse cx="137" cy="286" rx="18" ry="10" fill="#FDE7C9"/>
+    <ellipse cx="183" cy="286" rx="18" ry="10" fill="#FDE7C9"/>
+    <!-- Toe lines -->
+    <path d="M132 282 L132 290 M142 282 L142 290" stroke="#E3B47E" stroke-width="2" stroke-linecap="round"/>
+    <path d="M178 282 L178 290 M188 282 L188 290" stroke="#E3B47E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Collar -->
+  <path d="M100 162 Q160 184 220 162 L220 176 Q160 198 100 176 Z" fill="#E4572E"/>
+  <circle cx="160" cy="188" r="8" fill="#FFD166" stroke="#D9A93E" stroke-width="2"/>
+
+  <!-- Head group -->
+  <g class="head">
+    <!-- Ears -->
+    <ellipse class="ear-left" cx="80" cy="92" rx="21" ry="46" fill="#9C6B3C" transform="rotate(24 80 92)"/>
+    <ellipse cx="240" cy="92" rx="21" ry="46" fill="#9C6B3C" transform="rotate(-24 240 92)"/>
+    <!-- Head -->
+    <ellipse cx="160" cy="102" rx="72" ry="64" fill="#F7C58F"/>
+    <!-- Eye patch -->
+    <ellipse cx="199" cy="90" rx="25" ry="23" fill="#E3A061"/>
+    <!-- Eyes -->
+    <g class="eyes">
+      <circle cx="131" cy="100" r="12.5" fill="#3A2E2E"/>
+      <circle cx="189" cy="100" r="12.5" fill="#3A2E2E"/>
+      <circle cx="135" cy="95" r="4.4" fill="#FFFFFF"/>
+      <circle cx="193" cy="95" r="4.4" fill="#FFFFFF"/>
+      <circle cx="128" cy="104" r="2" fill="#FFFFFF" opacity="0.7"/>
+      <circle cx="186" cy="104" r="2" fill="#FFFFFF" opacity="0.7"/>
+    </g>
+    <!-- Blush -->
+    <ellipse cx="100" cy="130" rx="11" ry="6" fill="#F49E7A" opacity="0.7"/>
+    <ellipse cx="220" cy="130" rx="11" ry="6" fill="#F49E7A" opacity="0.7"/>
+    <!-- Muzzle -->
+    <ellipse cx="160" cy="134" rx="31" ry="23" fill="#FDE7C9"/>
+    <!-- Tongue -->
+    <g class="tongue">
+      <path d="M147 141 Q160 136 173 141 L170 172 Q160 181 150 172 Z" fill="#FF8FA3"/>
+      <path d="M160 146 L160 172" stroke="#E5697F" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <!-- Nose -->
+    <path d="M146 117 Q160 110 174 117 Q174 130 160 132 Q146 130 146 117 Z" fill="#4A3730"/>
+    <!-- Mouth -->
+    <path d="M157 132 Q152 144 141 141" stroke="#4A3730" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M163 132 Q168 144 179 141" stroke="#4A3730" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
 </svg>
