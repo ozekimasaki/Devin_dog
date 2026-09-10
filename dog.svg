@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- Floppy ears -->
+  <ellipse cx="48" cy="102" rx="24" ry="50" fill="#9C6B3C" transform="rotate(18 48 102)"/>
+  <ellipse cx="192" cy="102" rx="24" ry="50" fill="#9C6B3C" transform="rotate(-18 192 102)"/>
+  <!-- Head -->
+  <ellipse cx="120" cy="128" rx="82" ry="74" fill="#F7C58F"/>
+  <!-- Eye patch -->
+  <ellipse cx="158" cy="110" rx="28" ry="26" fill="#E3A061"/>
+  <!-- Eyes -->
+  <circle cx="88" cy="120" r="13" fill="#3A2E2E"/>
+  <circle cx="152" cy="120" r="13" fill="#3A2E2E"/>
+  <circle cx="92" cy="115" r="4.5" fill="#FFFFFF"/>
+  <circle cx="156" cy="115" r="4.5" fill="#FFFFFF"/>
+  <circle cx="85" cy="125" r="2" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="149" cy="125" r="2" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Blush -->
+  <ellipse cx="64" cy="148" rx="11" ry="6" fill="#F49E7A" opacity="0.7"/>
+  <ellipse cx="176" cy="148" rx="11" ry="6" fill="#F49E7A" opacity="0.7"/>
+  <!-- Muzzle -->
+  <ellipse cx="120" cy="156" rx="32" ry="24" fill="#FDE7C9"/>
+  <!-- Tongue -->
+  <path d="M108 162 Q120 157 132 162 L129 190 Q120 199 111 190 Z" fill="#FF8FA3"/>
+  <path d="M120 168 L120 190" stroke="#E5697F" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M107 140 Q120 133 133 140 Q133 153 120 155 Q107 153 107 140 Z" fill="#4A3730"/>
+  <!-- Mouth -->
+  <path d="M118 155 Q113 167 102 164" stroke="#4A3730" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M122 155 Q127 167 138 164" stroke="#4A3730" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>
